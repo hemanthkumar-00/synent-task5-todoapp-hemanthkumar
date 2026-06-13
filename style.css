@@ -1,21 +1,25 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
 
 .container {
     width: 400px;
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px gray;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
     text-align: center;
+    color: #764ba2;
+    margin-bottom: 20px;
 }
 
 .input-section {
@@ -25,34 +29,77 @@ h1 {
 
 input {
     flex: 1;
-    padding: 10px;
+    padding: 12px;
+    border: 2px solid #667eea;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
 }
 
-button {
-    padding: 10px 15px;
+input:focus {
+    border-color: #764ba2;
+}
+
+.input-section button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 10px;
     cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.input-section button:hover {
+    background: #764ba2;
+    transform: scale(1.05);
 }
 
 ul {
     list-style: none;
     padding: 0;
+    margin-top: 20px;
 }
 
 li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #eee;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 5px;
+    background: #f8f9ff;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-left: 6px solid #667eea;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+li:hover {
+    transform: translateX(5px);
+}
+
+span {
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
 }
 
 .completed {
     text-decoration: line-through;
-    color: gray;
+    color: #888;
 }
 
-.actions button {
-    margin-left: 5px;
+li button {
+    background: #ff4d6d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+li button:hover {
+    background: #d90429;
+    transform: scale(1.05);
 }
